@@ -103,10 +103,10 @@
 //let addTwoNumber = (x,y)=>x+y;
 //let result = addTwoNumber(12,15);
 //console.log(result);
-let addtwonumber =(x,y) => {
-    console.log("adding..");
-    return x+y;
-}
+// let addtwonumber =(x,y) => {
+//     console.log("adding..");
+//     return x+y;
+// }
 
 
 //variable scope in function
@@ -184,10 +184,177 @@ let addtwonumber =(x,y) => {
 // console.log("still available:",globalVar);
 
 
-let x ="global";
-function doingStuff(){
-    let x ="local";
-    console.log(x);
-}
-doingStuff();
-console.log(x);
+// let x ="global";
+// function doingStuff(){
+//     let x ="local";
+//     console.log(x);
+// }
+// doingStuff();
+// console.log(x);
+
+
+
+//IIFE(immmediately invoked function expression)
+
+
+// (function(){
+//     console.log("iife");
+// }
+// )();
+
+//(); to invoke the function that you created
+
+
+
+//recursive function
+
+
+// function getRecursive(nr){
+//     console.log(nr);
+//     getRecursive(--nr);
+// }
+// getRecursive(3);
+
+// function getRecursive(nr){
+//     // console.log(nr);
+//     if(nr>0){
+//         getRecursive(--nr);
+//     }
+//     console.log(nr);
+// }
+// getRecursive(3);
+
+
+// function logRecursive(nr){
+//     console.log("started function:",nr);
+//     if(nr>0){
+//         logRecursive(nr-1);
+//     }
+//     else{
+//         console.log("done with recursion");
+//     }
+//     console.log("ended function:",nr)
+// }
+// logRecursive(3);
+
+
+//the performance of recursion is slightly worse than the performance of regular iteration using a loop. so if the cause a bottleneck situation that would really slow down your application then you might want to consider another approach.
+
+// nested function
+
+// function doOuterFunctionStuff(nr){
+//     console.log("outer function");
+//     doInnerFunctionStuff(nr);
+//     function doInnerFunctionStuff(x){
+//         console.log(x+7);
+//         console.log("i can acces the outer variavble:",nr);
+//     }
+// }
+// doOuterFunctionStuff(5);
+
+
+// function doOuterFunctionStuff(nr){
+//     doInnerFunctionStuff(nr);
+//     function doInnerFunctionStuff(x){
+//         let z=10;
+
+//     }
+//     console.log("not accesbile",z);
+// }
+// doOuterFunctionStuff(2);           //reference error function nor difined
+
+
+
+
+//anonymous function
+
+
+// function doingStuffAnonymously(){
+//     console.log("not so secret though");
+// }
+// function(){
+//     console.log("not so secret though");
+// };
+
+
+
+
+//function callbacks
+
+
+// let functionVariable=function(){
+//     console.log("not so secret");
+// };
+// function doFlexibleStuff(executeStuff){
+//     executeStuff();
+//     console.log("inside doflexibleStufffunction");
+// }
+// doFlexibleStuff(functionVariable);
+
+// in javascript, there are many built in function 
+//setTimeout()function- its is very special function that is execution a certain function after a specified amount of time that it will wait first
+
+// let youGotThis=function(){
+//     console.log("you are doing really well, keep coding");
+// };
+// setTimeout(youGotThis,1000);
+
+//setInterval() function-if you need more encouraged you can use this. it work very similary but instead the specified function must onceit will keep on excuting it with specified interval
+
+// setInterval(youGotThis,1000);
+
+
+//quiz question
+            //question1
+
+// let val=10;
+// function tester(val){
+//     val +=10;
+//     if(val<100){
+//         return tester(val);
+//     }
+//     return val;
+// }
+// tester(val);
+// console.log(val);
+
+//question2
+
+// let testFunction=function(){
+//     console.log("hello");
+// }();
+
+// (function()
+// {
+//     console.log("welcome");
+// })();
+
+//question3
+
+// (function(){
+//     console.log("welcome");
+// })();
+// (function(){
+//     let firstname="laurence";
+// })();
+// let result=(function(){
+//     let firstname="laurence";
+//     return firstname;
+// })();
+// console.log(result);
+// (function(firstname){
+//     console.log("my name is"+ firstname);
+// })("laurence");
+
+//question4
+
+let test2=(num)=>num+5;
+console.log(test2(14));
+
+//question 5
+
+var addFive1 = function addFive1(num){
+    return num+2;
+};
+let addFive2=(num)=>num+2;
+console.log(addFive1(14));
