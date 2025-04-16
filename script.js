@@ -348,8 +348,8 @@
 
 //question4
 
-let test2=(num)=>num+5;
-console.log(test2(14));
+// let test2=(num)=>num+5;
+// console.log(test2(14));
 
 //question 5
 
