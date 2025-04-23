@@ -179,7 +179,8 @@
 //prototypes
 
 
-// is the mechanism in js that makes it possible to have object.when nothing is specifird when creating a class , th eobejcet inherit from object.prototype
+// is the mechanism in js that makes it possible to have object.when nothing is specifird when creating a class , the obejcet inherit from object.prototype
+
 class Person{
       constructor(firstname,lastname){
            this.firstname=firstname;
